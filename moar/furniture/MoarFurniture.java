@@ -1,5 +1,6 @@
-package moar;
+package moar.furniture;
 
+import moar.Proxy;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -12,11 +13,11 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid="MoarBase", name="Moar base mod", version="1.0.0")
+@Mod(modid="MoarFurniture", name="Moar furniture", version="0.0.1")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
-public class MoarBase {
-	@Instance("MoarBase")
-	public static MoarBase instance;
+public class MoarFurniture {
+	@Instance("MoarFurniture")
+	public static MoarFurniture instance;
 	public static Configuration config = null;
 	@SidedProxy(clientSide="moar.Client", serverSide="moar.Proxy")
 	public static Proxy proxy;
